@@ -1,6 +1,19 @@
 namespace SpriteKind {
     export const Tube = SpriteKind.create()
 }
+scene.onHitWall(SpriteKind.Player, function (sprite, location) {
+    if (Jumping < 1 && ((controller.right.isPressed() && controller.left.isPressed()) == false && Look_R > 0)) {
+        Jumping = 0
+        Mario.setImage(assets.image`Mario`)
+    } else if (Jumping < 1 && ((controller.right.isPressed() && controller.left.isPressed()) == false && Look_L > 0)) {
+        Jumping = 0
+        Mario.setImage(assets.image`Mario L`)
+    } else if (false) {
+    	
+    } else if (false) {
+    	
+    }
+})
 function Die () {
     if (Dead < 1) {
         Dead += 1
@@ -28,6 +41,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Tube, function (sprite, otherSpr
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    Jumping = 1
     if (Mario.vy == 0) {
         Mario.vy = -100
     }
@@ -42,6 +56,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, l
     Die()
 })
 function Start () {
+    Jumping = 0
+    info.setScore(0)
     Dead = 0
     music.stopAllSounds()
     tiles.setCurrentTilemap(tilemap`level2`)
@@ -106,10 +122,22 @@ function Start () {
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Look_R = 0
     Look_L = 1
+    animation.runImageAnimation(
+    Mario,
+    assets.animation`Mario Walk L`,
+    200,
+    true
+    )
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     Look_R = 1
     Look_L = 0
+    animation.runImageAnimation(
+    Mario,
+    assets.animation`Mario Walk`,
+    200,
+    true
+    )
 })
 function NextLevel () {
     tiles.setCurrentTilemap(tilemap`level4`)
@@ -123,8 +151,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 })
 let coins: Sprite = null
 let Tube: Sprite = null
-let Mario: Sprite = null
 let Dead = 0
+let Mario: Sprite = null
+let Jumping = 0
 let Look_L = 0
 let Look_R = 0
 Look_R = 1
