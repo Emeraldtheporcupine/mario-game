@@ -74,13 +74,7 @@ function Start () {
     for (let value of tiles.getTilesByType(assets.tile`myTile3`)) {
         _Block = sprites.create(assets.image`Q-Block`, SpriteKind.Block)
         tiles.placeOnTile(_Block, value)
-        tiles.setTileAt(value, assets.tile`transparency16`)
-        animation.runImageAnimation(
-        _Block,
-        assets.animation`Q-Block Shine`,
-        50,
-        false
-        )
+        tiles.setTileAt(value, assets.tile`myTile5`)
     }
     for (let value of tiles.getTilesByType(assets.tile`myTile1`)) {
         Tube = sprites.create(img`
@@ -139,6 +133,12 @@ function Start () {
     Mario.ay = 200
     tiles.placeOnTile(Mario, tiles.getTileLocation(0, 14))
     music.play(music.createSong(assets.song`Theme`), music.PlaybackMode.LoopingInBackground)
+    animation.runImageAnimation(
+    _Block,
+    assets.animation`Q-Block Shine`,
+    100,
+    true
+    )
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Look_R = 0

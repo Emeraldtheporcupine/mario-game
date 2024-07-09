@@ -40,6 +40,12 @@
         "tilemapTile": true,
         "displayName": "myTile4"
     },
+    "tile7": {
+        "data": "hwQQABAAAADAzMzMzMzMDOzu7u7u7u7O7O7uzuzu7s7s7u7u7u7uzuzu7u7u7u7O7O7u7u7u7s7s7u7u7u7uzuzs7u7u7s7O7Ozu7u7uzs7s7u7u7u7uzuzu7u7u7u7O7O7u7u7u7s7s7u7u7u7uzuzu7s7s7u7O7O7u7u7u7s7AzMzMzMzMDA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile5"
+    },
     "level4": {
         "id": "level4",
         "mimeType": "application/mkcd-tilemap",
