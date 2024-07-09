@@ -45,12 +45,21 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Mario.vy == 0) {
         Mario.vy = -100
     }
-    animation.runImageAnimation(
-    Mario,
-    assets.animation`Mario Jump`,
-    200,
-    false
-    )
+    if (Look_R > 0) {
+        animation.runImageAnimation(
+        Mario,
+        assets.animation`Mario Jump`,
+        200,
+        false
+        )
+    } else {
+        animation.runImageAnimation(
+        Mario,
+        assets.animation`Mario Jump L`,
+        200,
+        false
+        )
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
     Die()

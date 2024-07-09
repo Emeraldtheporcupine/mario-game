@@ -25,23 +25,51 @@ namespace myImages {
 . d 1 8 1 8 d . 
 . e e . e e . . 
 `;
+            case "image2":
+            case "Castle":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. e . f e . a . . e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`;
+            case "image3":
+            case "Q-Block":return img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`;
         }
         return null;
     })
 
     helpers._registerFactory("animation", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "Mario Jump L":
-            case "anim4":return [img`
-. . . 2 2 2 . . 
-. 2 2 2 2 2 2 . 
-. . f d f d . . 
-. d d d d d d . 
-d e e e d d . . 
-. 2 8 2 8 2 2 . 
-. . 1 8 1 8 . d 
-. e e . . e e . 
-`];
             case "Mario Jump":
             case "anim3":return [img`
 . . 2 2 2 . . . 
@@ -239,6 +267,586 @@ d . 1 8 1 8 . d
 . 2 8 2 8 2 2 . 
 . d 1 8 1 8 d . 
 . e e . e e . . 
+`];
+            case "Mario Jump L":
+            case "anim4":return [img`
+. . . 2 2 2 . . 
+. 2 2 2 2 2 2 . 
+. . f d f d . . 
+. d d d d d d . 
+d e e e d d . . 
+. 2 8 2 8 2 2 . 
+. . 1 8 1 8 . d 
+. e e . . e e . 
+`];
+            case "Castle Flag":
+            case "anim7":return [img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . b . . . . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b . . . . . . . 
+. . . . . . . . b . . . . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b . . . . . . . 
+. . . . . . . . b . . . . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b . . . . . . . 
+. . . . . . . . b . . . . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b . . . . . . . 
+. . . . . . . . b 1 . . . . . . 
+. e . f e . a . b e 1 f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b 1 1 . . . . . 
+. . . . . . . . b 1 1 1 . . . . 
+. e . f e . a . b e 1 1 e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b 1 1 1 . . . . 
+. . . . . . . . b 1 1 1 . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b 1 1 . . . . . 
+. . . . . . . . b 1 1 . . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b 1 1 1 . . . . 
+. . . . . . . . b 1 1 1 . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`, img`
+. . . . . . . . b 1 1 . . . . . 
+. . . . . . . . b 1 1 . . . . . 
+. e . f e . a . b e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
+`];
+            case "Q-Block Shine":
+            case "anim8":return [img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 d 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 d 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 d 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 d 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 d 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 d 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 d 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 d 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 d 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 d 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 d 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 d 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 d 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 d 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 d 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 d 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 d 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 d 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 d 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 d 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 d 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 d 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 d 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 d 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 d 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 d 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 d 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 d 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 d 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 d 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d d 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d d 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d d 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d d 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 d 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 d 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 d 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 d 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 d 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 d 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 d 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 d 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 d 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 1 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 1 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 1 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 1 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 d 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d d 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 1 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 d d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 d d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 d d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 1 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 d 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d 1 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 d d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 d 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 d 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 d 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 1 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d d 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d 1 d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 d 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 d 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 d 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 d 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 1 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 1 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 1 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 1 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 1 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d 1 d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 d 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 d 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 d 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 d 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 d 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 d 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 d 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 d d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 d d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 d d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 d d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 d 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 d d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d 1 d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 d 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 d 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 d 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 d 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 d 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 d 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 d 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 d 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 d 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 d 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 d 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 d 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 d 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 1 d d d d 4 4 4 4 4 9 
+9 4 4 4 d d 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 d 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 d 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 d 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 d 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 d 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 d 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 d 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 d 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 d 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 d 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 d 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 d 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 d d d d d d 4 4 4 4 4 9 
+9 4 4 4 1 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d d 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d d 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d d 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 d 4 d d d d d 4 4 4 4 4 9 
+9 4 4 d d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 1 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 1 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 1 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 d 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 d 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 d 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 d 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 d 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 d 4 4 d d d d d 4 4 4 4 4 9 
+9 4 d 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 d d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 d d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 d d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 d 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 d 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 d 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 d 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 d 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 d 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 d 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 d 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 d 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 d 4 4 4 d d d d d 4 4 4 4 4 9 
+9 d 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 d 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 d 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 d 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 d 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 d 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 d 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 d 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 d 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 d 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 d 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 d 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 d 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
+`, img`
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+9 4 4 4 4 d d d d d 4 4 4 4 4 9 
+9 4 4 4 d 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 d 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 d 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 d 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 d 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 4 4 4 4 4 4 4 9 
+9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
+a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
+c c c c c c c c c c c c c c c c 
 `];
         }
         return null;
