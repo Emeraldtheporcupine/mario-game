@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const Tube = SpriteKind.create()
+    export const Block = SpriteKind.create()
 }
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     if (Jumping < 1 && ((controller.right.isPressed() && controller.left.isPressed()) == false && Look_R > 0)) {
@@ -70,6 +71,17 @@ function Start () {
     Dead = 0
     music.stopAllSounds()
     tiles.setCurrentTilemap(tilemap`level2`)
+    for (let value of tiles.getTilesByType(assets.tile`myTile3`)) {
+        _Block = sprites.create(assets.image`Q-Block`, SpriteKind.Block)
+        tiles.placeOnTile(_Block, value)
+        tiles.setTileAt(value, assets.tile`transparency16`)
+        animation.runImageAnimation(
+        _Block,
+        assets.animation`Q-Block Shine`,
+        50,
+        false
+        )
+    }
     for (let value of tiles.getTilesByType(assets.tile`myTile1`)) {
         Tube = sprites.create(img`
             . 1 1 1 f f f f f f f f 7 7 7 . 
@@ -160,6 +172,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 })
 let coins: Sprite = null
 let Tube: Sprite = null
+let _Block: Sprite = null
 let Dead = 0
 let Mario: Sprite = null
 let Jumping = 0
