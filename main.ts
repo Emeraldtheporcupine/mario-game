@@ -1,6 +1,25 @@
 namespace SpriteKind {
     export const Tube = SpriteKind.create()
 }
+function Die () {
+    if (Dead < 1) {
+        Dead += 1
+        animation.runImageAnimation(
+        Mario,
+        assets.animation`Mario Dead`,
+        200,
+        false
+        )
+        for (let index = 0; index < 50; index++) {
+            Mario.y += 1
+        }
+        for (let index = 0; index < 50; index++) {
+            Mario.y += -1
+        }
+        sprites.destroy(Mario, effects.none, 0)
+        Start()
+    }
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Tube, function (sprite, otherSprite) {
     if (Mario.tilemapLocation() == tiles.getTileLocation(67, 11) && controller.down.isPressed()) {
         NextLevel()
@@ -19,7 +38,12 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     false
     )
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
+    Die()
+})
 function Start () {
+    Dead = 0
+    music.stopAllSounds()
     tiles.setCurrentTilemap(tilemap`level2`)
     for (let value of tiles.getTilesByType(assets.tile`myTile1`)) {
         Tube = sprites.create(img`
@@ -100,6 +124,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 let coins: Sprite = null
 let Tube: Sprite = null
 let Mario: Sprite = null
+let Dead = 0
 let Look_L = 0
 let Look_R = 0
 Look_R = 1
