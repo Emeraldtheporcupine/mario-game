@@ -25,25 +25,6 @@ namespace myImages {
 . d 1 8 1 8 d . 
 . e e . e e . . 
 `;
-            case "image2":
-            case "Castle":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. e . f e . a . . e . f e . a . 
-e e e e e e f a e e e e e e f a 
-e c c e e e a f e c e c e e a f 
-e e e e e e e e e e e e e e c c 
-. e c c e c e c e e c c c c c e 
-. e e e e e e e e e e e e c e c 
-. e e c e f f f e e c c e c c e 
-. e e e f f f f f e e e c c e c 
-. e e f f f f f f f e e e c c e 
-. e c f f f f f f f c e e c e c 
-. e e f f f f f f f e e e c c e 
-. e e f f f f f f f e c e c e c 
-. e e f f f f f f f e e e c c e 
-. e c f f f f f f f e e e c e c 
-`;
             case "image3":
             case "Q-Block":return img`
 a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
@@ -63,6 +44,25 @@ a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a
 9 4 4 4 4 4 4 4 d 4 4 4 4 4 4 9 
 a 9 9 9 9 9 9 9 9 9 9 9 9 9 9 a 
 c c c c c c c c c c c c c c c c 
+`;
+            case "image2":
+            case "Castle":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. e . f e . a . . e . f e . a . 
+e e e e e e f a e e e e e e f a 
+e c c e e e a f e c e c e e a f 
+e e e e e e e e e e e e e e c c 
+. e c c e c e c e e c c c c c e 
+. e e e e e e e e e e e e c e c 
+. e e c e f f f e e c c e c c e 
+. e e e f f f f f e e e c c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f c e e c e c 
+. e e f f f f f f f e e e c c e 
+. e e f f f f f f f e c e c e c 
+. e e f f f f f f f e e e c c e 
+. e c f f f f f f f e e e c e c 
 `;
         }
         return null;

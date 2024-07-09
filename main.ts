@@ -1,6 +1,7 @@
 namespace SpriteKind {
     export const Tube = SpriteKind.create()
     export const Block = SpriteKind.create()
+    export const Forterss = SpriteKind.create()
 }
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     if (Jumping < 1 && ((controller.right.isPressed() && controller.left.isPressed()) == false && Look_R > 0)) {
@@ -127,6 +128,8 @@ function Start () {
         true
         )
     }
+    Castle = sprites.create(assets.image`Castle`, SpriteKind.Forterss)
+    tiles.placeOnTile(Castle, tiles.getTileLocation(158, 13))
     Mario = sprites.create(assets.image`Mario`, SpriteKind.Player)
     scene.cameraFollowSprite(Mario)
     controller.moveSprite(Mario, 75, 0)
@@ -170,6 +173,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     info.changeScoreBy(1)
     music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
 })
+let Castle: Sprite = null
 let coins: Sprite = null
 let Tube: Sprite = null
 let _Block: Sprite = null
