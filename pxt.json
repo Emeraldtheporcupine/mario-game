@@ -4,7 +4,9 @@
     "dependencies": {
         "device": "*",
         "sprite-scaling": "*",
-        "darts": "*"
+        "darts": "*",
+        "animation": "*",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0"
     },
     "files": [
         "main.blocks",
