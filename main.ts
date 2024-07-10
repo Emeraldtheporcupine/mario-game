@@ -206,25 +206,7 @@ function Start () {
         )
     }
     for (let value of tiles.getTilesByType(assets.tile`myTile1`)) {
-        Tube = sprites.create(img`
-            . 1 1 1 f f f f f f f f 7 7 7 . 
-            1 1 1 7 7 7 7 7 7 7 7 7 7 7 7 6 
-            1 1 7 7 7 7 7 7 7 7 7 7 7 7 7 6 
-            1 7 7 7 7 7 7 7 7 7 7 7 7 7 6 6 
-            . 1 7 7 7 7 7 7 7 7 7 7 7 6 6 . 
-            . . 6 6 6 6 6 6 6 6 6 6 6 6 . . 
-            . . . 1 7 1 7 7 7 7 6 7 6 . . . 
-            . . . 1 1 7 7 7 7 7 7 6 6 . . . 
-            . . . 1 7 1 7 7 7 7 6 7 6 . . . 
-            . . . 1 1 7 7 7 7 7 7 6 6 . . . 
-            . . . 1 7 1 7 7 7 7 6 7 6 . . . 
-            . . . 1 1 7 7 7 7 7 7 6 6 . . . 
-            . . . 1 7 1 7 7 7 7 6 7 6 . . . 
-            . . . 1 1 7 7 7 7 7 7 6 6 . . . 
-            . . . 1 7 1 7 7 7 7 6 7 6 . . . 
-            . . . 1 1 7 7 7 7 7 7 6 6 . . . 
-            . . . 1 7 1 7 7 7 7 6 7 6 . . . 
-            `, SpriteKind.Tube)
+        Tube = sprites.create(assets.image`Tube`, SpriteKind.Tube)
         tiles.placeOnTile(Tube, value)
         tiles.setTileAt(value, assets.tile`transparency16`)
     }
@@ -290,6 +272,9 @@ function NextLevel () {
     tiles.placeOnTile(Mario, tiles.getTileLocation(0, 14))
     scene.cameraFollowSprite(Mario)
 }
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     sprites.destroy(otherSprite, effects.none, 0)
     info.changeScoreBy(1)
@@ -300,10 +285,11 @@ let coins: Sprite = null
 let Tube: Sprite = null
 let _Block: Sprite = null
 let Dead = 0
-let Mario: Sprite = null
 let Jumping = 0
+let Mario: Sprite = null
 let Look_L = 0
 let Look_R = 0
 Look_R = 1
 Look_L = 0
 Start()
+scaling.scaleByPixels(Mario, -4, ScaleDirection.Uniformly, ScaleAnchor.Bottom)
